@@ -23,7 +23,7 @@ const ArticleCard = ({ title, description, date, image_url, imageUrl, url, link,
           </p>
         </div>
 
-        <div className="relative min-h-[120px] w-full md:min-h-[100px] md:w-[180px] shrink-0 overflow-hidden rounded-sm bg-gradient-to-br from-gray-200 to-gray-300 order-1 md:order-2 md:self-stretch md:-mb-12">
+        <div className="relative min-h-[120px] w-full md:min-h-[100px] md:w-[180px] shrink-0 overflow-hidden rounded-sm md:bg-gradient-to-br md:from-gray-200 md:to-gray-300 order-1 md:order-2 md:self-stretch md:-mb-12">
           {resolvedImage ? (
             <img
               src={resolvedImage}
