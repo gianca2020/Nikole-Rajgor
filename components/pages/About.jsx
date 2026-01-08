@@ -77,7 +77,7 @@ const About = ({ showHeader = true }) => {
           </p>
         )}
         
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-12 pb-12">
           <Icons />
         </div>
       </section>

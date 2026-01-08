@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../../src/lib/supabase'
 import ArticleCard from '../navigation/ArticleCard'
 import SiteHeader from '../layout/SiteHeader'
+import Icons from '../ui/Icons'
 
 const Journalism = ({ showHeader = true }) => {
   const [articles, setArticles] = useState([])
@@ -55,6 +56,10 @@ const Journalism = ({ showHeader = true }) => {
             url={a.url || a.link || a.href}
           />
         ))}
+        
+        <div className="flex justify-center mt-12 pb-12">
+          <Icons />
+        </div>
       </section>
     </>
   )

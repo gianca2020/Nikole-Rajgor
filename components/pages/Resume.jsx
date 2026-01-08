@@ -1,4 +1,5 @@
 import Navbar from './Navbar'
+import Icons from '../ui/Icons'
 
 const Resume = () => {
   return (
@@ -39,6 +40,10 @@ const Resume = () => {
             className="w-full h-screen rounded border border-gray-600"
             title="Nikole Resume"
           />
+        </div>
+        
+        <div className="flex justify-center mt-12 pb-12">
+          <Icons />
         </div>
       </section>
     </>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../../src/lib/supabase'
 import CreativeCard from '../navigation/CreativeCard'
 import Navbar from './Navbar'
+import Icons from '../ui/Icons'
 
 const Creative = () => {
   const [creatives, setCreatives] = useState([])
@@ -61,6 +62,9 @@ const Creative = () => {
               link={c.link}
             />
           ))}
+        </div>
+        <div className="flex justify-center mt-12 pb-12">
+          <Icons />
         </div>
       </section>
     </>
