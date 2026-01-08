@@ -6,11 +6,12 @@ const CreativeCard = ({ title, description, imageUrl, link }) => {
       href={link || undefined}
       target={link ? '_blank' : undefined}
       rel={link ? 'noopener noreferrer' : undefined}
+      tabIndex={0}
       className="group relative block w-full bg-transparent p-6 no-underline transition hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 overflow-hidden rounded-md border border-white/20 hover:border-white/40 min-h-[200px]"
     >
       {/* Image - hidden by default, shown on hover */}
       {imageUrl && (
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 z-0">
           <img
             src={imageUrl}
             alt={title}
@@ -23,7 +24,7 @@ const CreativeCard = ({ title, description, imageUrl, link }) => {
 
       {/* Content - always visible */}
       <div className="relative z-10">
-        <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-white group-hover:text-gray-100">
+        <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-white group-hover:text-gray-100 group-focus:text-gray-100">
           {title}
         </h2>
         {description && (
