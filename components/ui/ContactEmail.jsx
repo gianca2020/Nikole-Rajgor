@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import twitterIcon from "../../assets/twitter.png";
-import linkedinIcon from "../../assets/linkedin (2).png";
+import linkedinIcon from "../../assets/linkedin (light).png";
 import instagramIcon from "../../assets/instagram.png";
 
 const ContactEmail = ({ fullHeight = true }) => {
