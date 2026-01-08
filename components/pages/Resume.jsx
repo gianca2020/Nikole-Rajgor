@@ -37,7 +37,7 @@ const Resume = () => {
         <div className="mb-12 text-white">
           <iframe 
             src="/Nikole_resume.pdf" 
-            className="w-full h-screen rounded border border-gray-600"
+            className="w-full h-[600px] md:h-screen rounded border border-gray-600"
             title="Nikole Resume"
           />
         </div>
