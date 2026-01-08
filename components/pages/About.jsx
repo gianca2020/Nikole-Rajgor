@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../../src/lib/supabase'
 import ArticleCard from '../navigation/ArticleCard'
 import SiteHeader from '../layout/SiteHeader'
-import Icons from '../ui/icons'
+import Icons from '../ui/Icons'
 
 
 // Supabase project URL (used to build public image URLs)
