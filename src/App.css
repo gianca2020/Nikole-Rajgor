@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+.font-playwrite {
+  font-family: 'Playwrite US Modern', cursive;
+}
+
+.font-italiana {
+  font-family: 'Italiana', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.header-line {
+  animation: expandWidth 0.8s ease-out forwards;
+}
