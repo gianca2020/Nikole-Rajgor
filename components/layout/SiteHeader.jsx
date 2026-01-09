@@ -1,5 +1,5 @@
 import Navbar from "../pages/Navbar.jsx";
-import nikolePhoto from "../../assets/nikole.jpg";
+import nikolePhoto from "../../assets/nikole2.png";
 
 const SiteHeader = () => {
   return (
