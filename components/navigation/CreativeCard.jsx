@@ -11,7 +11,7 @@ const CreativeCard = ({ title, description, imageUrl, link }) => {
     >
       {/* Image - always visible with transparency */}
       {imageUrl && (
-        <div className="absolute inset-0 opacity-40 z-0">
+        <div className="absolute inset-0 opacity-70 z-0">
           <img
             src={imageUrl}
             alt={title}
