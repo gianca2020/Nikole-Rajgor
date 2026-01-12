@@ -35,11 +35,21 @@ const Resume = () => {
         </header>
 
         <div className="mb-12 text-white">
-          <iframe 
-            src="/Nikole_resume.pdf#zoom=50&view=FitH" 
-            className="w-full h-[600px] md:h-screen rounded border border-gray-600"
-            title="Nikole Resume"
-          />
+          <div className="md:hidden">
+            <iframe 
+              src="/Nikole_resume.pdf" 
+              className="w-full h-[1000px] rounded border border-gray-600 scale-[0.55] origin-top-left"
+              style={{ width: 'calc(100% / 0.55)', height: 'calc(1000px / 0.55)' }}
+              title="Nikole Resume"
+            />
+          </div>
+          <div className="hidden md:block">
+            <iframe 
+              src="/Nikole_resume.pdf" 
+              className="w-full h-screen rounded border border-gray-600"
+              title="Nikole Resume"
+            />
+          </div>
         </div>
         
         <div className="flex justify-center mt-12 pb-12">
