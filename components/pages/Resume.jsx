@@ -37,15 +37,15 @@ const Resume = () => {
         <div className="mb-12 text-white">
           <div className="md:hidden">
             <iframe 
-              src="/Nikole_resume.pdf" 
-              className="w-full h-[1000px] rounded border border-gray-600 scale-[0.55] origin-top-left"
-              style={{ width: 'calc(100% / 0.55)', height: 'calc(1000px / 0.55)' }}
+              src="/Nikole_Rajgor_Resume _2026_ (new).pdf" 
+              className="w-full h-[600px] rounded border border-gray-600 scale-[0.55] origin-top-left"
+              style={{ width: 'calc(100% / 0.55)' }}
               title="Nikole Resume"
             />
           </div>
           <div className="hidden md:block">
             <iframe 
-              src="/Nikole_resume.pdf" 
+              src="/Nikole_Rajgor_Resume _2026_ (new).pdf" 
               className="w-full h-screen rounded border border-gray-600"
               title="Nikole Resume"
             />
