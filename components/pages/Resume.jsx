@@ -34,8 +34,8 @@ const Resume = () => {
           </div>
         </header>
 
-        <div className="mb-12 text-white">
-          <div className="md:hidden">
+        <div className="mb-4 md:mb-12 text-white">
+          <div className="md:hidden overflow-hidden h-[495px]">
             <iframe 
               src="/Nikole_Rajgor_Resume_2026.pdf" 
               className="w-full h-[900px] rounded border border-gray-600 scale-[0.55] origin-top-left"
@@ -52,7 +52,7 @@ const Resume = () => {
           </div>
         </div>
         
-        <div className="flex justify-center mt-12 pb-12">
+        <div className="flex justify-center mt-4 md:mt-12 pb-12">
           <Icons />
         </div>
       </section>
