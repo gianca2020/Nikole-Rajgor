@@ -35,10 +35,10 @@ const Resume = () => {
         </header>
 
         <div className="mb-4 md:mb-12 text-white">
-          <div className="md:hidden overflow-hidden h-[495px]">
+          <div className="md:hidden overflow-auto h-[495px] rounded border border-gray-600">
             <iframe 
               src="/Nikole_Rajgor_Resume_2026.pdf" 
-              className="w-full h-[900px] rounded border border-gray-600 scale-[0.55] origin-top-left"
+              className="w-full h-[900px] scale-[0.55] origin-top-left"
               style={{ width: 'calc(100% / 0.55)' }}
               title="Nikole Resume"
             />
