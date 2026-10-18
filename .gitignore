@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Local environment variants (keep the setup template)
+.env.*
+!.env.example
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/

@@ -17,7 +17,7 @@ const SiteHeader = () => {
 
   // Get display values with fallbacks
   const displayHeadshot = headshot_url || nikolePhoto;
-  const bioParagraphs = bio
+  const bioParagraphs = (bio && bio.trim())
     ? bio.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean)
     : FALLBACK_BIO;
 
