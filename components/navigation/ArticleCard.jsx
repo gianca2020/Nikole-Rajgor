@@ -1,4 +1,4 @@
-const ArticleCard = ({ title, description, date, image_url, imageUrl, url, link, href }) => {
+const ArticleCard = ({ title, description, date, outlet, image_url, imageUrl, url, link, href }) => {
   const resolvedImage = image_url || imageUrl
   const resolvedUrl = url || link || href
   const Container = resolvedUrl ? 'a' : 'div'
@@ -12,6 +12,11 @@ const ArticleCard = ({ title, description, date, image_url, imageUrl, url, link,
     >
       <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 pb-6">
         <div className="flex-1 text-white pt-0 order-2 md:order-1">
+          {outlet && (
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#F6F1E8] mb-2">
+              {outlet}
+            </p>
+          )}
           <h2 className="text-lg md:text-2xl font-semibold tracking-tight text-white group-hover:text-[#F6F1E8]">
             {title}
           </h2>

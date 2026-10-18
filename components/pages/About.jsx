@@ -20,8 +20,7 @@ const About = ({ showHeader = true }) => {
         .eq('is_highlight', true)
         .order('date', { ascending: false })
 
-      console.log('Fetched articles:', data)
-      console.log('Fetch error:', error)
+      if (error) console.error('Error fetching highlights:', error)
 
       if (!error && data && data.length > 0) {
         setArticles(data)
@@ -56,7 +55,7 @@ const About = ({ showHeader = true }) => {
               title={article.title}
               description={article.description}
               date={article.date}
-              
+              outlet={article.outlet}
               image_url={
               article.image_url
     ? article.image_url.startsWith('http')
@@ -67,7 +66,7 @@ const About = ({ showHeader = true }) => {
     : null
 }
 
-              
+
               url={article.url || article.link || article.href}
             />
           ))

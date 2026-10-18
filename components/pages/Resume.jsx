@@ -1,7 +1,13 @@
 import Navbar from './Navbar'
 import Icons from '../ui/Icons'
+import { useSiteSettings } from '../hooks/useSiteSettings'
 
 const Resume = () => {
+  const { resume_url } = useSiteSettings()
+
+  const src = resume_url ? `${resume_url}#toolbar=0&view=FitH` : '/resume.html'
+  const showPdfLink = !!resume_url
+
   return (
     <>
       <section className="w-full bg-[#1F1F1F]">
@@ -36,22 +42,35 @@ const Resume = () => {
 
         <div className="mb-4 md:mb-12 text-white">
           <div className="md:hidden overflow-hidden h-[600px] rounded border border-gray-600">
-            <iframe 
-              src="/resume.html" 
+            <iframe
+              src={src}
               className="w-full h-[1000px] scale-[0.6] origin-top-left"
               style={{ width: 'calc(100% / 0.6)' }}
               title="Nikole Resume"
             />
           </div>
           <div className="hidden md:block">
-            <iframe 
-              src="/resume.html" 
+            <iframe
+              src={src}
               className="w-full h-screen rounded border border-gray-600"
               title="Nikole Resume"
             />
           </div>
         </div>
-        
+
+        {showPdfLink && (
+          <div className="text-center mb-4 md:mb-8">
+            <a
+              href={resume_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#F6F1E8] hover:text-[#F6F1E8]/80 text-sm"
+            >
+              Open full PDF →
+            </a>
+          </div>
+        )}
+
         <div className="flex justify-center mt-4 md:mt-12 pb-12">
           <Icons />
         </div>

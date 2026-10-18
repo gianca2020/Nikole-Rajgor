@@ -45,13 +45,14 @@ const Journalism = ({ showHeader = true }) => {
         </div>
 
         {articles
-          .filter(a => a.title.toLowerCase().includes(searchQuery.toLowerCase()))
+          .filter(a => (a.title || '').toLowerCase().includes(searchQuery.toLowerCase()))
           .map(a => (
           <ArticleCard
             key={a.id}
             title={a.title}
             description={a.description}
             date={a.date}
+            outlet={a.outlet}
             image_url={a.image_url}
             url={a.url || a.link || a.href}
           />
