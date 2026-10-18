@@ -12,25 +12,13 @@ const FALLBACK_BIO = [
 ];
 
 const SiteHeader = () => {
-  const { headshot_url, bio, loaded } = useSiteSettings();
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const { headshot_url, bio } = useSiteSettings();
 
   // Get display values with fallbacks
   const displayHeadshot = headshot_url || nikolePhoto;
   const bioParagraphs = (bio && bio.trim())
     ? bio.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean)
     : FALLBACK_BIO;
-
-  // Preload image to avoid flash
-  useEffect(() => {
-    if (headshot_url && headshot_url !== nikolePhoto) {
-      const img = new Image();
-      img.onload = () => setImageLoaded(true);
-      img.src = headshot_url;
-    } else {
-      setImageLoaded(true);
-    }
-  }, [headshot_url]);
 
   return (
     <section className="w-full bg-[#F6F1E8]">

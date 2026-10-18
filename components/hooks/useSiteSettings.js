@@ -11,7 +11,7 @@ function getCachedSettings() {
     if (cached) {
       return JSON.parse(cached)
     }
-  } catch (e) {
+  } catch {
     // localStorage might be disabled or corrupted
     return null
   }
@@ -21,7 +21,7 @@ function getCachedSettings() {
 function setCachedSettings(data) {
   try {
     localStorage.setItem('site_settings_cache', JSON.stringify(data))
-  } catch (e) {
+  } catch {
     // localStorage might be disabled - ignore
   }
 }
@@ -66,7 +66,6 @@ export function useSiteSettings() {
   useEffect(() => {
     if (settingsCache) {
       setSettings(settingsCache)
-      setLoaded(true)
       return
     }
 
